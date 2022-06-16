@@ -134,23 +134,30 @@
 
 /* Card component */
 .home--container--1 {
-  display: inline-block;
   position: relative;
   overflow: hidden;
   width: 32%;
   height: 40rem;
-  background-color: yellow;
+  border-radius: 10px;
+  border: 1px solid var(--black);
+}
+
+.home--container__details {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
+}
+
+.home--container__details p {
+  margin: 8px;
+}
+
+.home--container__details button {
+  padding: 5px 5px;
+  cursor: pointer;
   border-radius: 10px;
   border: none;
+  background-color: var(--light-grey);
+  font-size: 1rem;
 }
-
-/* .home--container--1 h3 {
-  padding: 5px;
-  margin: 0;
-  background-color: aqua;
-}
-
-.home--container__box {
-  padding: 5px;
-  background-color: bisque;
-} */
