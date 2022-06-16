@@ -1,0 +1,27 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+:root {
+  --primary-color: #006a6a;
+  --grey: #f1f1f1;
+  --white: #ffffff;
+  --black: #0d0c22;
+  --light-grey: #85b5e5;
+  --dark-grey: #f7f7f7;
+  --light-white: #fafafb;
+  --blurred-text: #6e6d7a;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,156 @@
+.layout--container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header--wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 5rem;
+  background-color: var(--white);
+  color: var(--black);
+  box-shadow: 0px 0px 14px 2px rgba(0, 0, 0, 0.75);
+  z-index: 1;
+  width: 100%;
+}
+
+.header--wrapper__title {
+  padding-left: 1rem;
+}
+
+.header--wrapper__title:hover {
+  font-style: italic;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  width: 100%;
+  position: relative;
+}
+
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.footer--wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 5rem;
+  background-color: var(--white);
+}
+
+.intro--container {
+  display: flex;
+  background-color: var(--dark-grey);
+  height: 30rem;
+  position: relative;
+}
+
+.intro--container__details {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  width: 50%;
+  height: auto;
+}
+
+.intro--container__img {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  width: 35%;
+  height: 90%;
+}
+
+.intro--details__header {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.intro--details__docs {
+  font-size: 1.1rem;
+}
+
+.nav--wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: var(--white);
+  height: 4rem;
+  position: relative;
+}
+
+.nav--wrapper ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 20%;
+  left: 5%;
+  width: 90%;
+  height: 60%;
+}
+
+.nav--wrapper li {
+  font-size: 1.1rem;
+}
+
+.nav--wrapper li a {
+  text-decoration: none;
+  padding: 0.2rem 0.7rem;
+  border-radius: 3px;
+}
+
+.link-active {
+  background-color: var(--light-grey);
+  color: var(--black);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--blurred-text);
+  padding: 0.2rem 0.7rem;
+  border-radius: 3px;
+}
+
+.nav--wrapper li a:hover {
+  color: var(--black);
+  background-color: var(--light-grey);
+}
+
+.wrapper--content {
+  height: min-content;
+  position: relative;
+}
+
+/* Card component */
+.home--container--1 {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 32%;
+  height: 40rem;
+  background-color: yellow;
+  border-radius: 10px;
+  border: none;
+}
+
+/* .home--container--1 h3 {
+  padding: 5px;
+  margin: 0;
+  background-color: aqua;
+}
+
+.home--container__box {
+  padding: 5px;
+  background-color: bisque;
+} */

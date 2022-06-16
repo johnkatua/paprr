@@ -1,0 +1,15 @@
+.home--container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 23px;
+  margin: 0 4rem;
+  position: relative;
+}
+
+/* .home--container--1 {
+  display: inline-block;
+  width: 32%;
+  height: 35rem;
+  background-color: yellow;
+} */
