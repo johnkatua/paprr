@@ -15,7 +15,13 @@ export const paperApi = createApi({
     courses: builder.query({
       query: () => "/course",
     }),
+    examsByCategory: builder.query({
+      query: (id) => ({
+        url: `/paper/${id}`,
+        method: "GET"
+      })
+    })
   }),
 });
 
-export const { usePapersQuery, useFacultiesQuery, useCoursesQuery } = paperApi;
+export const { usePapersQuery, useFacultiesQuery, useCoursesQuery, useExamsByCategoryQuery } = paperApi;

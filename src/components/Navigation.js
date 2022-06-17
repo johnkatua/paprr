@@ -5,7 +5,6 @@ import { useFacultiesQuery } from "../services/paperApi";
 
 const Navigation = ({ onClick }) => {
   const { data } = useFacultiesQuery();
-  console.log(data);
   return (
     <nav className="nav--wrapper">
       <ul>
@@ -22,7 +21,7 @@ const Navigation = ({ onClick }) => {
             return (
               <li key={faculty._id}>
                 <NavLink
-                  to={faculty.acronym}
+                  to={`/paper/${faculty._id}`}
                   className={({ isActive }) =>
                     isActive ? "link-active" : "link"
                   }
