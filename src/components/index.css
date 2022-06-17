@@ -171,7 +171,9 @@
 }
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
-  
+  .intro--container__details {
+    font-size: 1.5rem;
+  }
   .intro--container__img {
     display: none;
   }
