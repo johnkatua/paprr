@@ -7,6 +7,7 @@ import Card from '../components/Card';
 const FilteredPapers = () => {
   const { id } = useParams();
   const { data, isLoading, isSuccess, isError, error } = useExamsByCategoryQuery(id);
+  console.log(data)
 
   let content;
 
@@ -20,6 +21,7 @@ const FilteredPapers = () => {
 
   return (
     <div className='home--container'>
+      {data && data.data.length === 0 && <h2>No papers under the faculty 😞</h2>}
       {content}
     </div>
   )
