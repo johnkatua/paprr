@@ -20,3 +20,18 @@
   gap: 23px;
   flex-wrap: wrap;
 }
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .home--container {
+    margin: 1rem;
+    padding: 0;
+  }
+
+  .home--container input {
+    width: 100%;
+  }
+
+  .home--container__data {
+    gap: 10px;
+  }
+}
