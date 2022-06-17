@@ -8,7 +8,9 @@ const Home = () => {
 
   return (
     <div className="home--container">
-      {data &&
+      <input />
+      <div className="home--container__data">
+        {data &&
         data.data.map((paper) => {
           return (
             <Card
@@ -21,6 +23,7 @@ const Home = () => {
             />
           );
         })}
+      </div>
     </div>
   );
 };
