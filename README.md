@@ -10,3 +10,4 @@ papers done by degree and diploma students.
 
 - [React](https://reactjs.org/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
+- [Parcel](https://parceljs.org/)
