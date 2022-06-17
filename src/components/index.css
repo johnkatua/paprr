@@ -169,3 +169,10 @@
   background-color: var(--light-grey);
   font-size: 1rem;
 }
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  
+  .intro--container__img {
+    display: none;
+  }
+}
