@@ -36,21 +36,8 @@ const Home = () => {
             <Card key={paper._id} academicYear={paper.academicYear} name={paper.name} status={paper.status} year={paper.year} file={paper.file} />
           ))
         ) : (
-          <h2>No papers in here currently!!!</h2>
+          <h2>No paper with that name currently!!!</h2>
         )}
-        {/* {data &&
-        data.data.map((paper) => {
-          return (
-            <Card
-              key={paper._id}
-              academicYear={paper.academicYear}
-              name={paper.name}
-              status={paper.status}
-              year={paper.year}
-              file={paper.file}
-            />
-          );
-        })} */}
       </div>
     </div>
   );
