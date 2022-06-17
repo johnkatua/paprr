@@ -12,4 +12,11 @@ papers done by degree and diploma students.
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 - [Parcel](https://parceljs.org/)
 
+## Author
+
+- [John Katua](https://www.linkedin.com/in/johnkatua/)
+
+
 ## License
+
+- [MIT](https://opensource.org/licenses/MIT)
