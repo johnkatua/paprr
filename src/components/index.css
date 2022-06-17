@@ -158,7 +158,8 @@
 }
 
 .home--container__details p {
-  margin: 8px;
+  margin: 0;
+  padding: 8px 0;
 }
 
 .home--container__details button {
@@ -186,8 +187,12 @@
   .intro--container__img {
     display: none;
   }
-  
+
   .nav--wrapper li {
     font-size: 1rem;
+  }
+
+  .home--container--1 {
+    width: 100%;
   }
 }
