@@ -3,11 +3,11 @@ import { useParams } from 'react-router-dom';
 
 import { useExamsByCategoryQuery } from '../services/paperApi';
 import Card from '../components/Card';
+import "./index.css";
 
 const FilteredPapers = () => {
   const { id } = useParams();
   const { data, isLoading, isSuccess, isError, error } = useExamsByCategoryQuery(id);
-  console.log(data)
 
   let content;
 
@@ -22,7 +22,9 @@ const FilteredPapers = () => {
   return (
     <div className='home--container'>
       {data && data.data.length === 0 && <h2>No papers under the faculty 😞</h2>}
-      {content}
+      <div className='filtered--data'>
+        {content}
+      </div>
     </div>
   )
 }

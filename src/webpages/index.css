@@ -12,13 +12,24 @@
   border: 1px solid var(--light-grey);
   font-size: 1rem;
   width: 30%;
+  outline: none;
 }
 
 
 .home--container__data {
   display: flex;
+  flex-direction: row;
   gap: 23px;
   flex-wrap: wrap;
+}
+
+.filtered--data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
