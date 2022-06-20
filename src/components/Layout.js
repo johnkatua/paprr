@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
       <div className="wrapper">
         <Intro />
         <Navigation onClick={() => setOpen((prev) => !prev)} />
-        {open ? <div>Open</div> : null}
+        {open ? <div>Opened</div> : null}
         <main className="wrapper--content">{children}</main>
       </div>
       <Footer />

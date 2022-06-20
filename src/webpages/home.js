@@ -17,7 +17,20 @@ const Home = () => {
 
     if (searchedWord !== '') {
       const response = data.data.filter((paper) => {
-        return paper.name.toLowerCase().includes(searchedWord.toLowerCase());
+        console.log(paper);
+        return (
+          paper
+            .name
+            .toLowerCase()
+            .includes(searchedWord.toLowerCase())) ||
+          paper
+            .status
+            .toLowerCase()
+            .includes(searchedWord.toLowerCase()) ||
+          paper
+            .year
+            .toLowerCase()
+            .includes(searchedWord.toLowerCase())
       });
       setResults(response);
     } else {
@@ -25,7 +38,6 @@ const Home = () => {
     }
     setName(searchedWord);
   }
-
 
   return (
     <div className="home--container">
