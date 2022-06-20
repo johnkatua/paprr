@@ -17,7 +17,6 @@ const Home = () => {
 
     if (searchedWord !== '') {
       const response = data.data.filter((paper) => {
-        console.log(paper);
         return (
           paper
             .name

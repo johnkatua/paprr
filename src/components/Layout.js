@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Footer from "./Footer";
 import Header from "./Header";
@@ -7,15 +7,12 @@ import Intro from "./Intro";
 import "./index.css";
 
 const Layout = ({ children }) => {
-  const [open, setOpen] = useState(false);
-
   return (
     <div className="layout--container">
       <Header />
       <div className="wrapper">
         <Intro />
-        <Navigation onClick={() => setOpen((prev) => !prev)} />
-        {open ? <div>Opened</div> : null}
+        <Navigation />
         <main className="wrapper--content">{children}</main>
       </div>
       <Footer />
