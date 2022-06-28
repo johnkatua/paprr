@@ -31,6 +31,16 @@
   gap: 1rem;
 }
 
+/* Register page */
+.register--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
 @media screen and (min-width: 0px) and (max-width: 768px) {
   .home--container {
     margin: 1rem;
