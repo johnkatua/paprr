@@ -26,10 +26,18 @@
   align-items: center;
   justify-content: space-between;
   position: absolute;
-  top: 35%;
+  top: 30%;
   left: 80%;
-  width: 12%;
-  background-color: blue;
+  width: 15%;
+}
+
+.header--wrapper__auth button {
+  background-color: var(--light-grey);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .header--wrapper__title:hover {
