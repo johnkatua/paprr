@@ -7,6 +7,8 @@ import MyBooks from "./mybooks";
 import Favourites from "./favourites";
 import FilteredPapers from "./fiilteredPapers";
 import "./index.css";
+import Login from "./Login";
+import Register from "./Register";
 
 const Webpages = () => {
   return (
@@ -15,6 +17,8 @@ const Webpages = () => {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
             <Route path="/fsst" element={<MyBooks />} />
             <Route path="/febe" element={<Favourites />} />
             <Route path="/paper/:id" element={<FilteredPapers />} />
