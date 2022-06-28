@@ -9,23 +9,34 @@ import Login from "./Login";
 import Register from "./Register";
 
 const LayoutRoute = ({ children }) => {
-  return <Layout>{children}</Layout>
+  return <Layout>{children}</Layout>;
 };
 
 const Webpages = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Router>
-          <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/" element={<LayoutRoute>
-              <Home />
-            </LayoutRoute>} exact />
-            <Route path="paper/:id" element={<LayoutRoute>
-              <FilteredPapers />
-            </LayoutRoute>} />
-          </Routes>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route
+            path="/"
+            element={
+              <LayoutRoute>
+                <Home />
+              </LayoutRoute>
+            }
+            exact
+          />
+          <Route
+            path="paper/:id"
+            element={
+              <LayoutRoute>
+                <FilteredPapers />
+              </LayoutRoute>
+            }
+          />
+        </Routes>
       </Router>
     </Suspense>
   );

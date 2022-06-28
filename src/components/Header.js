@@ -7,12 +7,8 @@ const Header = () => {
     <header className="header--wrapper">
       <h1 className="header--wrapper__title">TUK-repo</h1>
       <div className="header--wrapper__auth">
-        <button onClick={() => navigate('/register')}>
-          Register
-        </button>
-        <button onClick={() => navigate('/login')}>
-          Login
-        </button>
+        <button onClick={() => navigate("/register")}>Register</button>
+        <button onClick={() => navigate("/login")}>Login</button>
       </div>
     </header>
   );
