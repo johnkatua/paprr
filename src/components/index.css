@@ -7,6 +7,7 @@
 .header--wrapper {
   display: flex;
   flex-direction: column;
+  position: relative;
   height: 5rem;
   background-color: var(--white);
   color: var(--black);
@@ -17,6 +18,18 @@
 
 .header--wrapper__title {
   padding-left: 1rem;
+}
+
+.header--wrapper__auth {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 35%;
+  left: 80%;
+  width: 12%;
+  background-color: blue;
 }
 
 .header--wrapper__title:hover {
