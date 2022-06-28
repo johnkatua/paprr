@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate();
   return (
     <div className="register--wrapper">
       <div className="register--container">
@@ -26,8 +28,8 @@ const Register = () => {
         </form>
       </div>
       <div className="register--wrapper__links">
-        <button>Back to Homepage</button>
-        <button>Already have an account</button>
+        <button onClick={() => navigate("/")}>Back to Homepage</button>
+        <button onClick={() => navigate("/login")}>Already have an account</button>
       </div>
     </div>
   );

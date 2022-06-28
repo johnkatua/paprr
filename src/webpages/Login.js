@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   return (
     <div className="register--wrapper">
       <div className="login--container">
@@ -20,6 +22,10 @@ const Login = () => {
           </div>
           <button>Login</button>
         </form>
+      </div>
+      <div className="register--wrapper__links">
+        <button onClick={() => navigate("/")}>Back to Homepage</button>
+        <button onClick={() => navigate("/register")}>I do not have an account</button>
       </div>
     </div>
   );
