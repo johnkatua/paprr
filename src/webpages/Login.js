@@ -11,7 +11,12 @@ const Login = () => {
           </div>
           <div className="register--container__details">
             <label htmlFor="password">Password:</label>
-            <input type="password" name="password" id="password" autoComplete="on" />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              autoComplete="on"
+            />
           </div>
           <button>Login</button>
         </form>

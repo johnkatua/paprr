@@ -15,10 +15,19 @@ const Register = () => {
           </div>
           <div className="register--container__details">
             <label htmlFor="password">Password:</label>
-            <input type="password" name="password" id="password" autoComplete="on" />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              autoComplete="on"
+            />
           </div>
           <button>Register</button>
         </form>
+      </div>
+      <div className="register--wrapper__links">
+        <button>Back to Homepage</button>
+        <button>Already have an account</button>
       </div>
     </div>
   );

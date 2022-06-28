@@ -99,16 +99,34 @@
   border-radius: 5px;
   outline: none;
   border: 1px solid var(--light-grey);
-  padding: 5px .5rem;
+  padding: 5px 0.5rem;
 }
 
 .register--wrapper button {
   background-color: var(--light-grey);
   border: none;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   font-size: 1.2rem;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.register--wrapper__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 35%;
+  margin-top: 1rem;
+  text-decoration: underline;
+}
+
+.register--wrapper__links button {
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  background-color: transparent;
+  padding: 0;
 }
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
