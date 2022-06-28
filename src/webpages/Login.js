@@ -3,14 +3,21 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMsg, setErrorMsg] = useState('');
   const navigate = useNavigate();
+
+  const userLogin = (e) => {
+    e.preventDefault();
+  }
   return (
     <div className="register--wrapper">
+      {errorMsg && <p>{errorMsg}</p>}
       <div className="login--container">
-        <form>
+        <form onSubmit={userLogin}>
           <div className="register--container__details">
             <label htmlFor="email">Email:</label>
-            <input type="email" name="email" id="email" autoComplete="email" />
+            <input type="email" name="email" id="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
           <div className="register--container__details">
             <label htmlFor="password">Password:</label>
@@ -19,9 +26,11 @@ const Login = () => {
               name="password"
               id="password"
               autoComplete="on"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button>Login</button>
+          <button type="submit">Login</button>
         </form>
       </div>
       <div className="register--wrapper__links">
