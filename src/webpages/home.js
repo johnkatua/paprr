@@ -5,7 +5,7 @@ import Card from "../components/Card";
 
 const Home = () => {
   const { data } = usePapersQuery();
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
   const [results, setResults] = useState(data?.data);
 
   useEffect(() => {
@@ -15,36 +15,40 @@ const Home = () => {
   const filter = (e) => {
     const searchedWord = e.target.value;
 
-    if (searchedWord !== '') {
+    if (searchedWord !== "") {
       const response = data.data.filter((paper) => {
         return (
-          paper
-            .name
-            .toLowerCase()
-            .includes(searchedWord.toLowerCase())) ||
-          paper
-            .status
-            .toLowerCase()
-            .includes(searchedWord.toLowerCase()) ||
-          paper
-            .year
-            .toLowerCase()
-            .includes(searchedWord.toLowerCase())
+          paper.name.toLowerCase().includes(searchedWord.toLowerCase()) ||
+          paper.status.toLowerCase().includes(searchedWord.toLowerCase()) ||
+          paper.year.toLowerCase().includes(searchedWord.toLowerCase())
+        );
       });
       setResults(response);
     } else {
-      setResults(data && data.data)
+      setResults(data && data.data);
     }
     setName(searchedWord);
-  }
+  };
 
   return (
     <div className="home--container">
-      <input type="search" value={name} onChange={filter} placeholder="search paper" />
+      <input
+        type="search"
+        value={name}
+        onChange={filter}
+        placeholder="search paper"
+      />
       <div className="home--container__data">
         {results && results.length > 0 ? (
           results.map((paper) => (
-            <Card key={paper._id} academicYear={paper.academicYear} name={paper.name} status={paper.status} year={paper.year} file={paper.file} />
+            <Card
+              key={paper._id}
+              academicYear={paper.academicYear}
+              name={paper.name}
+              status={paper.status}
+              year={paper.year}
+              file={paper.file}
+            />
           ))
         ) : (
           <h2>No paper with that name currently!!!</h2>

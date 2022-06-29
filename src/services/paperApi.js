@@ -19,10 +19,31 @@ export const paperApi = createApi({
     examsByCategory: builder.query({
       query: (id) => ({
         url: `/paper/${id}`,
-        method: "GET"
-      })
-    })
+        method: "GET",
+      }),
+    }),
+    loginUser: builder.mutation({
+      query: (body) => ({
+        url: "signin",
+        method: "POST",
+        body,
+      }),
+    }),
+    registerUser: builder.mutation({
+      query: (body) => ({
+        url: "signup",
+        method: "POST",
+        body,
+      }),
+    }),
   }),
 });
 
-export const { usePapersQuery, useFacultiesQuery, useCoursesQuery, useExamsByCategoryQuery } = paperApi;
+export const {
+  usePapersQuery,
+  useFacultiesQuery,
+  useCoursesQuery,
+  useExamsByCategoryQuery,
+  useLoginUserMutation,
+  useRegisterUserMutation,
+} = paperApi;
