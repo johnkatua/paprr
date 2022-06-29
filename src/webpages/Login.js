@@ -1,18 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLoginUserMutation } from "../services/paperApi";
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [errorMsg, setErrorMsg] = useState('');
   const navigate = useNavigate();
+  const [loginUser, { data, isError, error }] = useLoginUserMutation();
 
-  const userLogin = (e) => {
+  useEffect(() => {
+    if (data && data.accessToken) {
+      localStorage.setItem('login', JSON.stringify({
+        userLogin: true,
+        token: data.accessToken
+      }));
+      setEmail('');
+      setPassword('');
+      navigate('/');
+    }
+    if(isError) {
+      setEmail('');
+      setPassword('');
+    }
+  }, [data, isError, error, navigate]);
+
+  const userLogin = async (e) => {
     e.preventDefault();
-  }
+    await loginUser({ email, password });
+  };
   return (
     <div className="register--wrapper">
-      {errorMsg && <p>{errorMsg}</p>}
+      {error && <p>{error.data.msg}</p>}
       <div className="login--container">
         <form onSubmit={userLogin}>
           <div className="register--container__details">
