@@ -8,8 +8,6 @@ const Register = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
   const [registerUser, { data, isError, error }] = useRegisterUserMutation();
-  console.log(data);
-
 
   useEffect(() => {
     if (data && data) {
