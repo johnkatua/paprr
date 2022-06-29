@@ -3,24 +3,27 @@ import { useNavigate } from "react-router-dom";
 import { useLoginUserMutation } from "../services/paperApi";
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const [loginUser, { data, isError, error }] = useLoginUserMutation();
 
   useEffect(() => {
     if (data && data.accessToken) {
-      localStorage.setItem('login', JSON.stringify({
-        userLogin: true,
-        token: data.accessToken
-      }));
-      setEmail('');
-      setPassword('');
-      navigate('/');
+      localStorage.setItem(
+        "login",
+        JSON.stringify({
+          userLogin: true,
+          token: data.accessToken,
+        })
+      );
+      setEmail("");
+      setPassword("");
+      navigate("/");
     }
-    if(isError) {
-      setEmail('');
-      setPassword('');
+    if (isError) {
+      setEmail("");
+      setPassword("");
     }
   }, [data, isError, error, navigate]);
 
@@ -28,7 +31,7 @@ const Login = () => {
     e.preventDefault();
     await loginUser({ email, password });
   };
-  
+
   return (
     <div className="register--wrapper">
       {error && <p>{error.data.msg}</p>}
@@ -36,7 +39,14 @@ const Login = () => {
         <form onSubmit={userLogin}>
           <div className="register--container__details">
             <label htmlFor="email">Email:</label>
-            <input type="email" name="email" id="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autoComplete="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
           <div className="register--container__details">
             <label htmlFor="password">Password:</label>
@@ -54,7 +64,9 @@ const Login = () => {
       </div>
       <div className="register--wrapper__links">
         <button onClick={() => navigate("/")}>Back to Homepage</button>
-        <button onClick={() => navigate("/register")}>I do not have an account</button>
+        <button onClick={() => navigate("/register")}>
+          I do not have an account
+        </button>
       </div>
     </div>
   );

@@ -26,16 +26,16 @@ export const paperApi = createApi({
       query: (body) => ({
         url: "signin",
         method: "POST",
-        body
-      })
+        body,
+      }),
     }),
     registerUser: builder.mutation({
       query: (body) => ({
         url: "signup",
         method: "POST",
-        body
-      })
-    })
+        body,
+      }),
+    }),
   }),
 });
 
@@ -45,5 +45,5 @@ export const {
   useCoursesQuery,
   useExamsByCategoryQuery,
   useLoginUserMutation,
-  useRegisterUserMutation
+  useRegisterUserMutation,
 } = paperApi;
