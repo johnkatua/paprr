@@ -28,6 +28,7 @@ const Login = () => {
     e.preventDefault();
     await loginUser({ email, password });
   };
+  
   return (
     <div className="register--wrapper">
       {error && <p>{error.data.msg}</p>}
